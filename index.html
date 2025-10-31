@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>コラボグッズ販売状況</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Prevent FOUC (Flash of Unstyled Content) for dark mode
+      if (
+        localStorage.getItem('theme') === 'dark' ||
+        (!('theme' in localStorage) &&
+          window.matchMedia('(prefers-color-scheme: dark)').matches)
+      ) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    </script>
+    <style>
+      /* Custom scrollbar for light theme */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f5f9; /* bg-slate-100 */
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1; /* bg-slate-300 */
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8; /* bg-slate-400 */
+      }
+
+      /* Custom scrollbar for dark theme */
+      .dark ::-webkit-scrollbar-track {
+        background: #1e293b; /* dark:bg-slate-800 */
+      }
+      .dark ::-webkit-scrollbar-thumb {
+        background: #475569; /* dark:bg-slate-600 */
+      }
+      .dark ::-webkit-scrollbar-thumb:hover {
+        background: #64748b; /* dark:bg-slate-500 */
+      }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "vite": "https://aistudiocdn.com/vite@^7.1.10",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.0.4"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 antialiased">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
