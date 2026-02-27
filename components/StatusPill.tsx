@@ -8,25 +8,27 @@ interface StatusPillProps {
 }
 
 export const StatusPill: React.FC<StatusPillProps> = ({ status, language }) => {
-  const getStatusClasses = () => {
-    switch (status) {
-      case ProductStatus.SoldOut:
-        return 'bg-red-100 text-red-800 border-red-200 dark:bg-red-900/30 dark:text-red-300 dark:border-red-500/30';
-      case ProductStatus.InStock:
-        return 'bg-green-100 text-green-800 border-green-200 dark:bg-green-900/30 dark:text-green-300 dark:border-green-500/30';
-      case ProductStatus.BeforeSale:
-        return 'bg-slate-100 text-slate-800 border-slate-200 dark:bg-slate-700/50 dark:text-slate-300 dark:border-slate-500/30';
-      default:
-        // Fallback for any unexpected status, e.g., if data source provides a new status not yet handled.
-        return 'bg-yellow-100 text-yellow-800 border-yellow-200 dark:bg-yellow-900/30 dark:text-yellow-300 dark:border-yellow-500/30';
-    }
-  };
+  const text = statusTranslations[status]?.[language] || status;
 
-  const baseClasses = 'w-24 md:w-28 text-center py-1.5 px-2 md:py-2 md:px-3 rounded-full text-sm md:text-base font-bold shadow-sm transition-transform transform hover:scale-105 border';
+  if (status === ProductStatus.SoldOut) {
+    return (
+      <div className="inline-block transform -rotate-6 border-[3px] border-[#A82424] text-[#A82424] dark:border-[#D14F4F] dark:text-[#D14F4F] px-4 py-1 text-base md:text-2xl font-black tracking-widest uppercase opacity-90 select-none shadow-sm rounded-sm" style={{ textShadow: "1px 1px 0px rgba(168, 36, 36, 0.2)"}}>
+        SOLD OUT
+      </div>
+    );
+  }
+
+  if (status === ProductStatus.InStock) {
+    return (
+      <span className="text-[#4A1E1E] dark:text-[#D4A3A3] text-sm md:text-lg font-serif font-black tracking-widest uppercase">
+        {text}
+      </span>
+    );
+  }
 
   return (
-    <div className={`${baseClasses} ${getStatusClasses()} transition-colors duration-300`}>
-      {statusTranslations[status]?.[language] || status}
-    </div>
+    <span className="text-[#692020] dark:text-[#A04040] text-sm md:text-lg font-serif font-bold tracking-widest uppercase opacity-70">
+      {text}
+    </span>
   );
 };

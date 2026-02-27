@@ -208,14 +208,14 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 flex flex-col items-center p-4 sm:p-6 md:p-8 transition-colors duration-300">
+    <div className="min-h-screen bg-[#E5DCC5] dark:bg-[#0F0A09] text-[#4A1E1E] dark:text-[#EAEAEA] flex flex-col items-center p-4 sm:p-6 md:p-12 transition-colors duration-500 font-serif">
       <header className="w-full max-w-7xl mb-8">
         <div className="flex justify-between items-center">
             <div className="flex flex-col sm:flex-row sm:items-baseline sm:space-x-6">
-                <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-red-600 order-2 sm:order-1">
+                <h1 className="sr-only">
                 {locales.headerTitle[language]}
                 </h1>
-                {data && <p className="text-base text-gray-500 dark:text-gray-400 whitespace-nowrap order-1 sm:order-2">{locales.lastUpdated[language]}: {data.lastUpdated}</p>}
+                {data && <p className="text-base text-[#692020] dark:text-[#A04040] font-bold whitespace-nowrap order-1 sm:order-2">{locales.lastUpdated[language]}: {data.lastUpdated}</p>}
             </div>
             <div className="flex items-center space-x-2">
                 {isAistudioAvailable && (
@@ -252,7 +252,7 @@ const App: React.FC = () => {
         {data && <InventoryTable data={data} language={language} />}
       </main>
 
-      <footer className="w-full max-w-7xl pt-6 border-t border-gray-200 dark:border-gray-700 mt-8 transition-colors duration-300">
+      <footer className="w-full max-w-7xl pt-8 border-t border-[#2C2C2C] dark:border-[#EAEAEA] mt-12 transition-colors duration-500">
         <div className="flex items-center space-x-4">
             <div>
               {data?.backUrl && (
