@@ -67,15 +67,15 @@ export const ProductSelector: React.FC<ProductSelectorProps> = ({
       <div>
         <button
           type="button"
-          className="inline-flex justify-between items-center w-full rounded-md border border-gray-300 dark:border-gray-600 shadow-sm px-4 py-3 bg-white dark:bg-gray-700 text-lg font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 dark:focus:ring-offset-gray-800 focus:ring-indigo-500"
+          className="inline-flex justify-between items-center w-full rounded-xl border-2 border-gray-300 dark:border-gray-500 shadow-lg px-6 py-4 bg-white dark:bg-gray-700 text-xl font-bold text-[#4A1E1E] dark:text-[#EAEAEA] hover:bg-gray-50 dark:hover:bg-gray-600 focus:outline-none focus:ring-4 focus:ring-indigo-500/50 transition-all duration-200"
           id="options-menu"
           aria-haspopup="true"
           aria-expanded={isOpen}
           onClick={() => setIsOpen(!isOpen)}
         >
-          {locales.selectProducts[language]} ({selectedProducts.length})
-          <svg className="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-            <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+          <span className="truncate">{locales.selectProducts[language]} ({selectedProducts.length})</span>
+          <svg className="-mr-1 ml-3 h-6 w-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fillRule="evenodd" d="M5.293 7.293a1 1 0 01-1.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
           </svg>
         </button>
       </div>
