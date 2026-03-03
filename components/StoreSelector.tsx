@@ -61,7 +61,7 @@ export const StoreSelector: React.FC<StoreSelectorProps> = ({
       <div>
         <button
           type="button"
-          className="inline-flex justify-between items-center w-full rounded-xl border-2 border-gray-300 dark:border-gray-500 shadow-lg px-6 py-4 bg-white dark:bg-gray-700 text-xl font-bold text-[#4A1E1E] dark:text-[#EAEAEA] hover:bg-gray-50 dark:hover:bg-gray-600 focus:outline-none focus:ring-4 focus:ring-indigo-500/50 transition-all duration-200"
+          className="inline-flex justify-between items-center w-full rounded-xl border-2 border-gray-300 dark:border-gray-500 shadow-lg px-4 sm:px-6 py-3 sm:py-4 bg-white dark:bg-gray-700 text-sm sm:text-base md:text-xl font-bold text-[#4A1E1E] dark:text-[#EAEAEA] hover:bg-gray-50 dark:hover:bg-gray-600 focus:outline-none focus:ring-4 focus:ring-indigo-500/50 transition-all duration-200"
           id="store-options-menu"
           aria-haspopup="true"
           aria-expanded={isOpen}
