@@ -73,11 +73,7 @@ export const InventoryTable: React.FC<InventoryTableProps> = ({ data, language }
 
           {/* Heading Section */}
           <div className="text-center mb-10 md:mb-14">
-            <div className="inline-block border-y border-[#692020] dark:border-[#A04040] px-4 py-1 mb-4 md:mb-6">
-              <span className="text-[10px] md:text-sm font-bold tracking-[0.2em] text-[#692020] dark:text-[#C58B8B]">
-                - TAVERN COLLAB MERCH INVENTORY -
-              </span>
-            </div>
+
             <h2 className="text-4xl md:text-6xl font-black tracking-wider text-[#4A1E1E] dark:text-[#EAEAEA] mb-2 uppercase drop-shadow-sm font-serif underline decoration-[#692020]/20 underline-offset-8">
               GOODS LIST
             </h2>
