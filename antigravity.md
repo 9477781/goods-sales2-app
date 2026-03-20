@@ -15,4 +15,5 @@
 
 ## Current Step
 
-- アプリのUI確認（開発モードでの起動とブラウザでの確認）
+- @vercel/analyticsの統合と確認
+
