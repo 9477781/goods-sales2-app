@@ -5,6 +5,7 @@ import { GITHUB_JSON_URL, MOCK_INVENTORY_DATA } from "./constants";
 import { InventoryData } from "./types";
 import { locales, Language } from "./locales";
 import { DownloadIcon } from "./components/icons/DownloadIcon";
+import { Analytics } from "@vercel/analytics/react";
 
 // Polling interval in milliseconds (e.g., 30 seconds)
 const POLLING_INTERVAL = 30000;
@@ -296,6 +297,7 @@ const App: React.FC = () => {
           </div>
         </div>
       </footer>
+      <Analytics />
     </div>
   );
 };
